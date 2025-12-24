@@ -320,7 +320,7 @@ a {
 
 
 
-@media screen and (max-width : 765px) {
+@media screen and (max-width : 700px) {
 
     .menu-btn {
         display: block;
@@ -332,7 +332,8 @@ a {
         right: 10px;
         display: none;
         flex-direction: column;
-        /* Glass */
+
+        /* Glass effect*/
         background: rgba(120, 40, 140, 0.3);
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
