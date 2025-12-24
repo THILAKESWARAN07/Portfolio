@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('Images/body background.jpeg');
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    position: static;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    cursor: default; 
+    user-select: none;    
+    caret-color: transparent;
+    
+}
+
+
+.top-bar {
+    background-image: url('Images/image 2.jpeg');
+    background-size: cover;
+    color: #fff;
+    width: 100%;
+    height: 70px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+
+    border: rgba(137, 43, 226, 0.7) 5px solid;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-menu li {
+    cursor: pointer;
+    padding: 6px 12px;
+    transition: all 0.3s ease;
+
+}
+
+li:hover {
+    background-color: blueviolet;
+    transform: scale3d(1.1, 1.1, 1.1);
+    border-radius: 8px;
+    border-color: aliceblue;
+    border-width: 3px;
+    border-style: solid;
+}
+
+
+.menu-btn {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+
+.about {
+    margin: 100px auto;
+    width: 80%;
+
+    background: rgba(30, 14, 197, 0.3);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 14px;
+    border: 5px solid rgba(137, 61, 208, 0.25);
+    box-shadow: 0 10px 35px rgba(76, 70, 180, 0.5);
+
+    color: aliceblue;
+    padding: 50px;
+    border-radius: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.about-text h3 {
+    font-size: 22px;
+    color: #d8b4ff;
+}
+
+.about-text p {
+    font-size: 20px;
+    margin-top: 20px;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.about img {
+
+    border-radius: 50%;
+    border-color: blueviolet;
+    border-width: 5px;
+    border-style: ridge;
+
+}
+
+
+
+.Skills {
+    margin: 100px auto;
+    width: 80%;
+
+    background: rgba(30, 14, 197, 0.3);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 14px;
+    border: 5px solid rgba(137, 61, 208, 0.25);
+    box-shadow: 0 10px 35px rgba(76, 70, 180, 0.5);
+
+    color: aliceblue;
+    padding: 50px;
+    border-radius: 40px;
+
+
+}
+
+.Skills h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+
+}
+
+.skilllist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+
+.skilllist h4 {
+    background: rgba(137, 43, 226, 0.7);
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.skilllist h4:hover {
+    background-color: blueviolet;
+    transform: scale3d(1.1, 1.1, 1.1);
+    border-radius: 15px;
+    border-color: aliceblue;
+    border-width: 3px;
+    border-style: solid;
+}
+
+
+
+.projects {
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    width: 80%;
+
+    background: rgba(30, 14, 197, 0.3);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 14px;
+    border: 5px solid rgba(137, 61, 208, 0.25);
+    box-shadow: 0 10px 35px rgba(76, 70, 180, 0.5);
+
+    color: aliceblue;
+    padding: 50px;
+    border-radius: 40px;
+}
+
+.projects h2,
+.projects hr {
+    font-size: 30px;
+
+    grid-column: 1 / -1;
+}
+
+.projectlist {
+    background: rgba(137, 43, 226, 0.7);
+    gap: 25px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    border-radius: 20px;
+}
+
+.projectlist:hover {
+    background-color: blueviolet;
+    transform: scale3d(1.02, 1.02, 1.02);
+    border-radius: 15px;
+    border-color: aliceblue;
+    border-width: 3px;
+    border-style: solid;
+}
+
+.projectlist h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.projectlist p {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+.projectlist img{
+    margin-left: 90%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    
+}
+
+
+
+.contact {
+    margin: 100px auto;
+    width: 80%;
+
+    background: rgba(30, 14, 197, 0.3);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 14px;
+    border: 5px solid rgba(137, 61, 208, 0.25);
+    box-shadow: 0 10px 35px rgba(76, 70, 180, 0.5);
+
+    color: aliceblue;
+    padding: 30px;
+    border-radius: 40px;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.contact h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+
+
+}
+
+.contact h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.contact-info {
+
+    padding: 10px;
+
+}
+
+
+
+.card:hover {
+    box-shadow: 3px 30px 30px rgba(0, 0, 0, 0.2);
+    border-color: aliceblue;
+    border-width: 5px;
+    border-style: solid;
+
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+#about, #skills, #projects, #contacts {
+    scroll-margin-top: 90px;
+    /* height of navbar */
+}
+
+
+
+@media screen and (max-width : 765px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        display: none;
+        flex-direction: column;
+        /* Glass */
+        background: rgba(120, 40, 140, 0.3);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        box-shadow: 0 10px 35px rgba(180, 70, 160, 0.5);
+
+
+        width: 20%;
+        border-radius: 10px;
+        margin-top: 20px;
+        opacity: 0.8;
+        transform: translateY(-15px);
+        pointer-events: none;
+
+        transition: opacity 0.3s ease, transform 0.3s ease;
+
+    }
+
+    .nav-menu li {
+        padding: 10px;
+
+
+    }
+
+    .nav-menu.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+
+
+}
