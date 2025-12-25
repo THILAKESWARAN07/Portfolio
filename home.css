@@ -4,12 +4,14 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+
 }
 
 html {
@@ -28,10 +30,10 @@ body {
     right: 0;
     bottom: 0;
 
-    cursor: default; 
-    user-select: none;    
+    cursor: default;
+    user-select: none;
     caret-color: transparent;
-    
+
 }
 
 
@@ -86,8 +88,7 @@ li:hover {
 
 
 .about {
-    margin: 100px auto;
-    width: 80%;
+
 
     background: rgba(30, 14, 197, 0.3);
     backdrop-filter: blur(16px);
@@ -97,9 +98,9 @@ li:hover {
     box-shadow: 0 10px 35px rgba(76, 70, 180, 0.5);
 
     color: aliceblue;
-    padding: 50px;
     border-radius: 40px;
     display: flex;
+
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -135,9 +136,6 @@ li:hover {
 
 
 .Skills {
-    margin: 100px auto;
-    width: 80%;
-
     background: rgba(30, 14, 197, 0.3);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -146,7 +144,6 @@ li:hover {
     box-shadow: 0 10px 35px rgba(76, 70, 180, 0.5);
 
     color: aliceblue;
-    padding: 50px;
     border-radius: 40px;
 
 
@@ -187,11 +184,9 @@ li:hover {
 
 
 .projects {
-    margin: 100px auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
-    width: 80%;
 
     background: rgba(30, 14, 197, 0.3);
     backdrop-filter: blur(16px);
@@ -201,7 +196,6 @@ li:hover {
     box-shadow: 0 10px 35px rgba(76, 70, 180, 0.5);
 
     color: aliceblue;
-    padding: 50px;
     border-radius: 40px;
 }
 
@@ -244,20 +238,21 @@ li:hover {
     margin-bottom: 10px;
     margin-top: 20px;
     font-size: 18px;
-}
-.projectlist img{
-    margin-left: 90%;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    
+    line-height: 1.4;
 }
 
+
+.projectlist img {
+    display: inline-block;
+    position: relative;
+    left: 360px;
+    margin-bottom: 10px;
+    margin-top: 6px;
+
+}
 
 
 .contact {
-    margin: 100px auto;
-    width: 80%;
-
     background: rgba(30, 14, 197, 0.3);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -266,7 +261,6 @@ li:hover {
     box-shadow: 0 10px 35px rgba(76, 70, 180, 0.5);
 
     color: aliceblue;
-    padding: 30px;
     border-radius: 40px;
     justify-content: space-between;
     gap: 40px;
@@ -313,14 +307,40 @@ a {
     text-decoration: none;
 }
 
-#about, #skills, #projects, #contacts {
+#about,
+#skills,
+#projects,
+#contacts {
     scroll-margin-top: 90px;
-    /* height of navbar */
+
+
+
 }
 
+.about,
+.Skills,
+.projects,
+.contact {
+    scroll-margin-top: 90px;
+    width: 80%;
+    max-width: 1100px;
+    margin: 100px auto;
+    padding: 50px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 
 
-@media screen and (max-width : 500px) {
+}
+
+@media screen and (min-width : 770px) and (max-width : 1025px){
+    .projectlist img {
+        left: 250px;
+    }
+}
+
+@media screen and (max-width : 427px) {
+
+
 
     .menu-btn {
         display: block;
@@ -329,7 +349,6 @@ a {
     .nav-menu {
         position: absolute;
         top: 70px;
-        right: 10px;
         display: none;
         flex-direction: column;
 
@@ -342,7 +361,8 @@ a {
         box-shadow: 0 10px 35px rgba(180, 70, 160, 0.5);
 
 
-        width: 20%;
+        width: 30%;
+        right: 5px;
         border-radius: 10px;
         margin-top: 20px;
         opacity: 0.8;
@@ -355,6 +375,7 @@ a {
 
     .nav-menu li {
         padding: 10px;
+        margin-right: 7px;
 
 
     }
@@ -366,10 +387,75 @@ a {
         pointer-events: auto;
     }
 
+    .about,
+    .Skills,
+    .projects,
+    .contact {
+        width: 95%;
+        padding: 20px;
+        margin: 60px auto;
+    }
+
+    .about-text h2 {
+        font-size: 22px;
+    }
+
+    .about-text h3 {
+        font-size: 19px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+    }
+
+    .Skills h2 {
+        font-size: 22px;
+    }
+
+    .skilllist h4 {
+        font-size: 17px;
+    }
+
+    .projects {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .projects h2,
+    .projects hr {
+        font-size: 22px;
+    }
+
+    .projectlist h3 {
+        font-size: 17px;
+    }
+
+    .projectlist p {
+        font-size: 14px;
+    }
+
+    .projectlist img {
+        left: 230px;
+    }
+
+    
+
+    .contact h2 {
+        font-size: 22px;
+    }
+
+    .contact h3 {
+        font-size: 19px;
+    }
+
+    .contact p {
+        font-size: 14px;
+    }
+}    
 
 
-}
-@media screen and (max-width : 760px) {
+@media screen and (max-width : 377px) {
+
+
 
     .menu-btn {
         display: block;
@@ -378,7 +464,6 @@ a {
     .nav-menu {
         position: absolute;
         top: 70px;
-        right: 10px;
         display: none;
         flex-direction: column;
 
@@ -391,7 +476,8 @@ a {
         box-shadow: 0 10px 35px rgba(180, 70, 160, 0.5);
 
 
-        width: 20%;
+        width: 40%;
+        right: 5px;
         border-radius: 10px;
         margin-top: 20px;
         opacity: 0.8;
@@ -404,6 +490,7 @@ a {
 
     .nav-menu li {
         padding: 10px;
+        margin-right: 10%;
 
 
     }
@@ -415,6 +502,182 @@ a {
         pointer-events: auto;
     }
 
+    .about,
+    .Skills,
+    .projects,
+    .contact {
+        width: 95%;
+        padding: 20px;
+        margin: 60px auto;
+    }
+
+    .about-text h2 {
+        font-size: 22px;
+    }
+
+    .about-text h3 {
+        font-size: 19px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+    }
+
+    .Skills h2 {
+        font-size: 22px;
+    }
+
+    .skilllist h4 {
+        font-size: 17px;
+    }
+
+    .projects {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .projects h2,
+    .projects hr {
+        font-size: 22px;
+    }
+
+    .projectlist h3 {
+        font-size: 17px;
+    }
+
+    .projectlist p {
+        font-size: 14px;
+    }
+
+    .projectlist img {
+        left: 205px;
+    }
+
+    
+
+    .contact h2 {
+        font-size: 22px;
+    }
+
+    .contact h3 {
+        font-size: 19px;
+    }
+
+    .contact p {
+        font-size: 14px;
+    }
+}    
 
 
-}
+
+@media screen and (max-width : 322px) {
+
+
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 70px;
+        display: none;
+        flex-direction: column;
+
+        /* Glass effect*/
+        background: rgba(120, 40, 140, 0.3);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        box-shadow: 0 10px 35px rgba(180, 70, 160, 0.5);
+
+
+        width: 40%;
+        right: 5px;
+        border-radius: 10px;
+        margin-top: 20px;
+        opacity: 0.8;
+        transform: translateY(-15px);
+        pointer-events: none;
+
+        transition: opacity 0.3s ease, transform 0.3s ease;
+
+    }
+
+    .nav-menu li {
+        padding: 10px;
+        margin-right: 10%;
+
+
+    }
+
+    .nav-menu.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .about,
+    .Skills,
+    .projects,
+    .contact {
+        width: 95%;
+        padding: 20px;
+        margin: 60px auto;
+    }
+
+    .about-text h2 {
+        font-size: 20px;
+    }
+
+    .about-text h3 {
+        font-size: 17px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+    }
+
+    .Skills h2 {
+        font-size: 20px;
+    }
+
+    .skilllist h4 {
+        font-size: 17px;
+    }
+
+    .projects {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .projects h2,
+    .projects hr {
+        font-size: 20px;
+    }
+
+    .projectlist h3 {
+        font-size: 20px;
+    }
+
+    .projectlist p {
+        font-size: 14px;
+    }
+
+    .projectlist img {
+        left: 170px;
+    }
+
+
+    .contact h2 {
+        font-size: 20px;
+    }
+
+    .contact h3 {
+        font-size: 17px;
+    }
+
+    .contact p {
+        font-size: 14px;
+    }
+}    
